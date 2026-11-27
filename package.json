@@ -1,0 +1,13 @@
+{
+  "name": "pin-high",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Daily par-3 golf decision game (prototype). Single-page three.js app built from src/.",
+  "scripts": {
+    "build": "node tools/build.js",
+    "test": "node tests/physics/run-all.js",
+    "test:render": "npm run build && node tests/render/smoke.js",
+    "serve": "npm run build && npx --yes http-server dist -p 8080 -c-1"
+  },
+  "devDependencies": { "puppeteer-core": "^22.0.0", "three": "0.128.0" }
+}
