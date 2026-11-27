@@ -1,0 +1,41 @@
+2026-03-01 Kidney 105yd gain 0.00 typ 0.93 | best 9i High Hard fade -> holed 0ft
+2026-03-08 Double plateau 77yd gain 0.00 typ 1.30 | best SW High Draw -> holed 0ft
+2026-03-15 Classic 141yd gain 0.00 typ 0.86 | best 8i High Hard fade -> holed 0ft
+2026-03-22 Punchbowl 145yd gain 0.00 typ 1.07 | best 8i High Draw -> holed 0ft
+2026-03-29 False front 61yd gain 0.70 typ 0.00 | best LW High Draw -> holed 0ft
+2026-04-05 Two-lobe 185yd gain 0.14 typ 0.47 | best 4i High Neutral -> holed 0ft
+2026-04-12 Road 116yd gain 0.00 typ 1.06 | best 8i High Hard fade -> holed 0ft
+2026-04-19 Biarritz 85yd gain 0.00 typ 2.60 | best GW High Fade -> holed 0ft
+2026-04-26 Kidney 84yd gain 0.00 typ 0.84 | best SW High Draw -> holed 0ft
+2026-05-03 Redan 134yd gain 0.00 typ 0.11 | best 9i High Hard fade -> holed 0ft
+2026-05-10 Redan 85yd gain 0.00 typ 0.89 | best GW High Hard fade -> holed 0ft
+2026-05-17 Classic 80yd gain 0.00 typ 0.67 | best SW Standard Fade -> holed 0ft
+2026-05-24 Classic 170yd gain 0.00 typ 1.03 | best 7i High Hard fade -> holed 0ft
+2026-05-31 Tiers 179yd gain 0.00 typ 2.60 | best 4i High Hard fade -> holed 0ft
+2026-06-07 False front 91yd gain 0.09 typ 1.08 | best GW High Fade -> holed 0ft
+2026-06-14 Tiers 193yd gain 0.00 typ 0.80 | best 5i Standard Hard fade -> holed 0ft
+2026-06-21 Biarritz 144yd gain 0.00 typ 0.27 | best 4i High Hard fade -> holed 0ft
+2026-06-28 Two-lobe 117yd gain 0.65 typ 1.14 | best 8i High Hard draw -> holed 0ft
+2026-07-05 False front 176yd gain 0.00 typ 0.00 | best 6i High Hard fade -> holed 0ft
+2026-07-12 Two-lobe 101yd gain 0.68 typ 1.02 | best GW Low Hard fade -> holed 0ft
+2026-07-19 Eden 67yd gain 0.00 typ 0.95 | best LW Low Fade -> holed 0ft
+2026-07-26 Punchbowl 119yd gain 0.59 typ 1.15 | best 8i High Hard draw -> holed 0ft
+2026-08-02 Road 164yd gain 0.00 typ 1.22 | best 5i High Hard fade -> holed 0ft
+2026-08-09 Spine 110yd gain 0.00 typ 0.71 | best GW High Neutral -> holed 0ft
+2026-08-16 Kidney 147yd gain 0.00 typ 1.02 | best 8i High Hard fade -> holed 0ft
+2026-08-23 Road 173yd gain 0.00 typ 1.05 | best 6i High Hard fade -> holed 0ft
+2026-08-30 Eden 148yd gain 0.00 typ 0.65 | best 6i Standard Fade -> holed 0ft
+2026-09-06 Road 81yd gain 0.00 typ 0.81 | best SW High Draw -> holed 0ft
+2026-09-13 Boomerang 101yd gain 0.00 typ 0.81 | best PW High Hard draw -> holed 0ft
+2026-09-20 Eden 160yd gain 0.00 typ 1.28 | best 7i High Hard fade -> holed 0ft
+2026-09-27 Spine 80yd gain 0.00 typ 2.60 | best GW High Neutral -> holed 0ft
+2026-10-04 Boomerang 120yd gain 0.00 typ 2.60 | best 7i High Hard draw -> holed 0ft
+2026-10-11 Biarritz 162yd gain 0.97 typ 1.10 | best 4i Low Hard fade -> holed 0ft
+2026-10-18 False front 180yd gain 0.00 typ 1.01 | best 7i High Hard fade -> holed 0ft
+2026-10-25 Punchbowl 142yd gain 0.00 typ 1.04 | best 7i High Hard fade -> holed 0ft
+2026-11-01 Road 183yd gain 0.69 typ 0.80 | best 4i High Neutral -> holed 0ft
+2026-11-08 Biarritz 63yd gain 0.00 typ 0.33 | best LW High Draw -> holed 0ft
+2026-11-15 Double plateau 159yd gain 0.00 typ 2.60 | best 7i High Hard fade -> holed 0ft
+2026-11-22 Two-lobe 90yd gain 0.00 typ 0.74 | best GW High Hard fade -> holed 0ft
+2026-11-29 Biarritz 165yd gain 0.00 typ 1.14 | best 4i High Hard draw -> holed 0ft
+{"variant":"baseline","name":"baseline: free aim, no dispersion (v118)","holes":40,"meanGain":0.113,"medianGain":0,"holesGainOver01":7,"holesGainOver025":6,"bestUsesSpinOrShape":40,"typicalMeanCost":1.06,"typicalShareOver15":0.13,"bestHolesOut":40,"seconds":20}
