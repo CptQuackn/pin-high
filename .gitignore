@@ -1,3 +1,7 @@
 node_modules/
-tests/physics/.cache/
-tests/render/out/
+dist/
+!legacy/dist/
+coverage/
+*.tsbuildinfo
+legacy/tests/physics/.cache/
+legacy/tests/render/out/

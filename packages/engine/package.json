@@ -1,0 +1,21 @@
+{
+  "name": "@pin-high/engine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pure Pin High game logic: seeded holes, shot physics, best-shot search and scoring. No DOM, no clock, no globals.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:fast": "vitest run --exclude test/physics.test.ts",
+    "test:physics": "vitest run test/physics.test.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
