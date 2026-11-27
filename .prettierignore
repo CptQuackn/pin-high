@@ -1,0 +1,6 @@
+legacy/
+pnpm-lock.yaml
+**/golden/*.json
+**/dist/
+docs/
+**/*.cjs
