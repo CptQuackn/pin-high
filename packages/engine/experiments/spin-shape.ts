@@ -125,6 +125,54 @@ function dispersion(disp: number, n: number): Variant {
   };
 }
 
+/* ---------- Keven's idea: no spread at a 100% swing, more spread the further the swing is from 100% ----------
+   spread scale = base + k * |swing - 1|. Over-swings up to maxSwing are allowed and really fly further. */
+
+function swingDisp(k: number, base: number, maxSwing: number, n: number): Variant {
+  const Z = makeZ(n, 4242);
+  const ev = (H: Hole, c: Choice, fine: boolean) => {
+    const g = geom(H, c.sel, c.aim);
+    const club = CLUBS[c.sel.club]!;
+    const need = g.dist * YD * g.wf;
+    g.carry = Math.min(need, club.y * maxSwing) / YD;
+    g.land = g.carry / g.wf;
+    const scale = base + k * Math.abs(g.swing - 1);
+    const d = SPIN[c.sel.spin]!.d;
+    g.sa = scale * 0.028 * g.carry * d;
+    g.sl = scale * 0.024 * g.carry * Math.sqrt(d);
+    const Zs = scale > 0 ? Z : Z0;
+    let s = 0;
+    for (let i = 0; i < Zs.g1.length; i++)
+      s += evOf(H, outcomeAt(H, c.sel, landFrom(g, c.aim, Zs.g1[i]!, Zs.g2[i]!), null, fine));
+    return s / Zs.g1.length;
+  };
+  return {
+    name: `swing-based spread: ${base} + ${k} x |swing - 1|, swings 70% to ${maxSwing * 100}%`,
+    candidates(H, spins, shapes) {
+      const out: Choice[] = [];
+      const S = H.S;
+      const nx = Math.floor(2 * S) + 1;
+      for (let j = 0; j < nx; j++)
+        for (let i = 0; i < nx; i++) {
+          const x = -S + i;
+          const z = -S + j;
+          if (Math.hypot(x, z) > H.outline(Math.atan2(z, x)) - 0.5) continue;
+          for (let kk = 0; kk < CLUBS.length; kk++)
+            for (const sp of spins)
+              for (const sh of shapes) {
+                const sel = { club: kk, spin: sp, shape: sh };
+                const g = geom(H, sel, { x, z });
+                if (g.swing < 0.7 || g.swing > maxSwing) continue;
+                out.push({ sel, aim: { x, z } });
+              }
+        }
+      return out;
+    },
+    ev,
+    typical: freeTypical,
+  };
+}
+
 /* ---------- fixed club distances: aim picks a direction, the club and swing set the carry ---------- */
 
 interface FixedOpts {
@@ -198,6 +246,9 @@ const variants: Record<string, Variant> = {
   baseline,
   disp1: dispersion(1, 8),
   disp05: dispersion(0.5, 8),
+  swing5: swingDisp(5, 0, 1.1, 8),
+  swing3: swingDisp(3, 0, 1.1, 8),
+  swing5base: swingDisp(5, 0.25, 1.1, 8),
   fixed: fixedVariant('fixed carry: full swing only, spin/shape change roll only', {
     swings: [1],
     shapeCarry: 0,
